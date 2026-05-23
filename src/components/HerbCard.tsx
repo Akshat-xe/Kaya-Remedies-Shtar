@@ -57,7 +57,7 @@ export function HerbCard({ herb, onOpen, large }: Props) {
       onClick={() => onOpen(herb.id)}
       className="herb-card group block text-left w-full rounded-[2rem] overflow-hidden glass-card-premium hover:border-sage/40 hover:-translate-y-1.5 transition-all duration-500 hover:shadow-[0_24px_50px_rgba(0,0,0,0.55)]"
     >
-      <div className="relative h-40 sm:h-48 md:h-56 overflow-hidden bg-black">
+      <div className="relative h-44 sm:h-48 md:h-56 overflow-hidden bg-black">
         <img
           src={herb.image}
           alt={herb.name}
@@ -72,24 +72,24 @@ export function HerbCard({ herb, onOpen, large }: Props) {
           {herb.tag}
         </div>
       </div>
-      
-      <div className="p-4 md:p-6 flex flex-col justify-between min-h-[220px] sm:min-h-[260px] md:min-h-[280px] bg-card/10">
+
+      <div className="p-5 md:p-6 flex flex-col justify-between min-h-[200px] sm:min-h-[240px] md:min-h-[280px] bg-card/10">
         <div>
           <p className="font-sans text-[10px] uppercase tracking-[0.28em] text-moss mb-2">
             {herb.categories[0].replace("-", " ")}
           </p>
-          <h3 className="font-angel-wish text-xl md:text-2xl text-mist leading-[1.05] mb-1 tracking-wide group-hover:text-leaf transition-colors animate-pulse-subtle">
+          <h3 className="font-angel-wish text-2xl md:text-2xl text-mist leading-[1.05] mb-1 tracking-wide group-hover:text-leaf transition-colors">
             {herb.name}
           </h3>
           <p className="font-sans italic text-[11px] text-moss-dark mb-3">{herb.latin}</p>
-          <p className="font-sans text-xs leading-[1.6] text-leaf/75 mb-4 line-clamp-2">{herb.benefit}</p>
+          <p className="font-sans text-sm md:text-xs leading-[1.6] text-leaf/75 mb-4 line-clamp-2">{herb.benefit}</p>
         </div>
 
         <div className="flex items-center justify-between pt-4 border-t border-moss-dark/20 mt-2">
           <span className="font-sans text-[9px] uppercase tracking-[0.2em] text-moss">
             Library Reference
           </span>
-          <span className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-sage text-primary-foreground font-sans text-[10px] font-bold uppercase tracking-wider group-hover:bg-leaf group-hover:gap-2 transition-all duration-300 shadow-[0_6px_15px_rgba(0,0,0,0.25)]">
+          <span className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-sage text-primary-foreground font-sans text-[10px] font-bold uppercase tracking-wider group-hover:bg-leaf group-hover:gap-2 transition-all duration-300 shadow-[0_6px_15px_rgba(0,0,0,0.25)]">
             Study Herb <span>→</span>
           </span>
         </div>

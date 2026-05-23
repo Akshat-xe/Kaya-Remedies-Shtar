@@ -99,14 +99,14 @@ function HerbLibrary() {
       <Header />
 
       {/* Hero Banner Section */}
-      <section className="relative h-[55vh] md:h-[60vh] overflow-hidden mb-12 rounded-[2.5rem] mx-6 lg:mx-12 mt-32 border border-sage/15">
+      <section className="relative h-[42vh] md:h-[55vh] overflow-hidden mb-8 md:mb-12 rounded-[1.5rem] md:rounded-[2.5rem] mx-3 sm:mx-5 md:mx-6 lg:mx-12 mt-20 md:mt-32 border border-sage/15">
         <img
           src={sectionForest}
           alt="Mossy forest floor backdrop"
           className="absolute inset-0 w-full h-full object-cover scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/85 via-background/40 to-background/90" />
-        <div className="relative h-full flex flex-col justify-center px-8 md:px-16 max-w-7xl mx-auto w-full">
+        <div className="relative h-full flex flex-col justify-center px-5 md:px-16 max-w-7xl mx-auto w-full">
           <div className="comp-hero">
             <p className="font-sans text-[11px] uppercase tracking-[0.32em] text-sage mb-4">
               <Link to="/" className="hover:text-mist transition cursor-pointer">Home</Link> · The Compendium
@@ -122,7 +122,7 @@ function HerbLibrary() {
       </section>
 
       {/* Filter bar */}
-      <section className="px-6 lg:px-12 mb-12">
+      <section className="px-3 sm:px-5 md:px-6 lg:px-12 mb-8 md:mb-12">
         <div className="max-w-7xl mx-auto glass-card-premium rounded-3xl p-6 md:p-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             <div className="relative">
@@ -181,15 +181,15 @@ function HerbLibrary() {
       </section>
 
       {/* Grid */}
-      <section className="px-6 lg:px-12 mb-24">
+      <section className="px-3 sm:px-5 md:px-6 lg:px-12 mb-16 md:mb-24">
         <div className="max-w-7xl mx-auto">
           {filtered.length === 0 ? (
-            <div className="text-center py-32">
+            <div className="text-center py-20 md:py-32">
               <div className="font-serif text-3xl text-mist mb-3">No herbs match this search.</div>
               <p className="font-sans text-sm text-leaf/60">Try adjusting your filters or query.</p>
             </div>
           ) : (
-            <div className="reveal-stagger grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+            <div className="reveal-stagger grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
               {filtered.map((h) => (
                 <HerbCard key={h.id} herb={h} onOpen={setOpenId} />
               ))}

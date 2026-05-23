@@ -17,19 +17,22 @@ export function Header() {
 
   return (
     <div
-      className="fixed top-0 left-0 right-0 z-[2000] pointer-events-none transition-all duration-500"
-      style={{ padding: scrolled ? "16px 24px" : "28px 36px" }}
+      className={`fixed top-0 left-0 right-0 z-[2000] pointer-events-none transition-all duration-500 ${
+        scrolled
+          ? "px-3 py-2 sm:px-4 sm:py-3 md:px-6 md:py-4"
+          : "px-3 py-3 sm:px-4 sm:py-4 md:px-7 md:py-5 lg:px-9 lg:py-7"
+      }`}
     >
       <header
         className="glass-nav pointer-events-auto mx-auto flex items-center justify-between transition-all duration-500"
         style={{
           maxWidth: 1200,
-          borderRadius: scrolled ? 999 : 28,
-          padding: scrolled ? "12px 28px" : "16px 32px",
+          borderRadius: scrolled ? 32 : 24,
+          padding: scrolled ? "10px 20px" : "14px 28px",
         }}
       >
         <Link to="/" className="flex items-center gap-3 group">
-          <div className="relative w-9 h-9 rounded-full bg-gradient-to-br from-sage to-moss flex items-center justify-center glow-sage">
+          <div className="relative w-9 h-9 rounded-full bg-gradient-to-br from-sage to-moss flex items-center justify-center glow-sage shrink-0">
             <svg viewBox="0 0 24 24" fill="none" className="w-5 h-5">
               <path
                 d="M2 22C2 22 8.5 20.5 12 17C15.5 13.5 16 8 16 8"
@@ -91,7 +94,7 @@ export function Header() {
       </header>
 
       {mobileOpen && (
-        <div className="pointer-events-auto md:hidden mt-3 mx-auto max-w-[1200px] glass-nav rounded-3xl p-6 flex flex-col gap-4">
+        <div className="pointer-events-auto md:hidden mt-2 glass-nav rounded-3xl p-5 flex flex-col gap-4">
           <Link to="/" className="font-serif text-xl text-mist hover:text-leaf transition-colors cursor-pointer">Home</Link>
           <Link to="/herbs" className="font-serif text-xl text-mist hover:text-leaf transition-colors cursor-pointer">Herb Library</Link>
           <Link to="/herbs" className="inline-flex items-center justify-center px-5 py-3 rounded-full bg-sage text-primary-foreground font-sans text-sm font-semibold hover:bg-leaf transition-colors cursor-pointer">

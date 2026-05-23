@@ -158,7 +158,7 @@ function Landing() {
       <Header />
 
       {/* HERO */}
-      <section ref={heroRef} className="relative min-h-screen flex items-center pt-32 pb-20 px-6 lg:px-12">
+      <section ref={heroRef} className="relative min-h-screen flex items-center pt-24 md:pt-32 pb-12 md:pb-20 px-4 sm:px-6 lg:px-12">
         <div
           className="hero-glow absolute -top-40 -left-40 w-[800px] h-[800px] rounded-full opacity-30 blur-3xl pointer-events-none"
           style={{ background: "radial-gradient(circle, oklch(0.5 0.07 130), transparent 60%)" }}
@@ -189,7 +189,7 @@ function Landing() {
               Ancient herbal knowledge — distilled, refined, and presented in the visual language of today. Nature has given everything. We simply remember how to use it.
             </p>
 
-            <div className="hero-ctas w-full max-w-lg p-4 rounded-[2rem] glass-card border border-sage/15 flex flex-col sm:flex-row items-center justify-center gap-6 mb-14 text-center mx-auto lg:mx-0">
+            <div className="hero-ctas w-full max-w-lg p-4 rounded-[1.5rem] md:rounded-[2rem] glass-card border border-sage/15 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-10 md:mb-14 text-center mx-auto lg:mx-0">
               <Link
                 to="/herbs"
                 className="group w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-sage to-leaf text-primary-foreground font-sans text-sm font-semibold tracking-wide shadow-[0_12px_40px_-8px_oklch(0.68_0.09_130/0.6)] hover:scale-105 active:scale-95 transition-all duration-300 pointer-events-auto cursor-pointer"
@@ -244,7 +244,7 @@ function Landing() {
       </section>
 
       {/* MARQUEE */}
-      <section className="marquee overflow-hidden py-12 border-y border-moss-dark/40 bg-card/30">
+      <section className="marquee overflow-hidden py-8 md:py-12 border-y border-moss-dark/40 bg-card/30">
         <div className="marquee-track flex gap-12 whitespace-nowrap w-max">
           {[...Array(2)].flatMap((_, i) =>
             ["Ashwagandha", "Turmeric", "Tulsi", "Reishi", "Moringa", "Lavender", "Ginger", "Lion's Mane", "Astragalus", "Chamomile"].map((n) => (
@@ -257,7 +257,7 @@ function Landing() {
       </section>
 
       {/* STORY */}
-      <section id="story" className="relative py-20 px-6 lg:px-12">
+      <section id="story" className="relative py-12 md:py-20 px-4 sm:px-6 lg:px-12">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="relative reveal">
             <img
@@ -299,7 +299,7 @@ function Landing() {
       </section>
 
       {/* PINNED BANNER */}
-      <section className="banner-section relative h-[80vh] overflow-hidden my-20">
+      <section className="banner-section relative h-[50vh] md:h-[80vh] overflow-hidden my-10 md:my-20">
         <img
           src={sectionForest}
           alt="Mossy forest floor"
@@ -320,9 +320,9 @@ function Landing() {
       </section>
 
       {/* FEATURED HERBS */}
-      <section className="py-20 px-6 lg:px-12">
+      <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-12">
         <div className="max-w-7xl mx-auto">
-          <div className="flex items-end justify-between mb-16 gap-8 flex-wrap reveal">
+          <div className="flex items-end justify-between mb-8 md:mb-16 gap-6 flex-wrap reveal">
             <div>
               <p className="font-sans text-[11px] uppercase tracking-[0.32em] text-sage mb-4">Featured remedies</p>
               <h2 className="font-serif text-5xl md:text-6xl leading-[1.05] text-mist max-w-2xl">
@@ -362,7 +362,7 @@ function Landing() {
         </div>
       </section>
       {/* TESTIMONIALS */}
-      <section className="py-20 px-6 lg:px-12">
+      <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-12">
         <div className="max-w-5xl mx-auto text-center">
           <p className="reveal font-sans text-[11px] uppercase tracking-[0.32em] text-sage mb-4">From the community</p>
           <h2 className="reveal font-serif text-5xl md:text-6xl leading-[1.05] text-mist mb-12">
@@ -416,7 +416,7 @@ function Landing() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 px-6 lg:px-12">
+      <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-12">
         <div className="reveal max-w-5xl mx-auto glass-card rounded-[2.5rem] p-12 md:p-20 text-center relative overflow-hidden">
           <div
             className="absolute inset-0 opacity-30"
@@ -444,7 +444,7 @@ function Landing() {
       </section>
 
       {/* FEEDBACK SECTION */}
-      <section className="relative py-16 px-6 lg:px-12 bg-background/50">
+      <section className="relative py-10 md:py-16 px-4 sm:px-6 lg:px-12 bg-background/50">
         <div className="w-full h-px bg-gradient-to-r from-transparent via-sage/20 to-transparent mb-12" />
 
         <div className="max-w-4xl mx-auto">
