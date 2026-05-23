@@ -7,7 +7,6 @@ export interface Herb {
   description: string;
   image: string;
   images: string[];
-  dziImages: string[];
   tag: string;
   tagColor: string;
   featured: boolean;
@@ -37,13 +36,7 @@ export const herbs: Herb[] = [
       "/thumbnails/med1_pasted_image__4_.jpg",
       "/thumbnails/med1_pasted_image__7_.jpg"
     ],
-    dziImages: [
-      "/deepzoom/med1_pasted_image.dzi",
-      "/deepzoom/med1_pasted_image__2_.dzi",
-      "/deepzoom/med1_pasted_image__3_.dzi",
-      "/deepzoom/med1_pasted_image__4_.dzi",
-      "/deepzoom/med1_pasted_image__7_.dzi"
-    ],
+
     tag: "Verified",
     tagColor: "oklch(0.71 0.09 130)",
     featured: true,
@@ -72,11 +65,7 @@ export const herbs: Herb[] = [
       "/thumbnails/med3_pasted_image__3_.jpg",
       "/thumbnails/med3_pasted_image__4_.jpg"
     ],
-    dziImages: [
-      "/deepzoom/med3_pasted_image.dzi",
-      "/deepzoom/med3_pasted_image__3_.dzi",
-      "/deepzoom/med3_pasted_image__4_.dzi"
-    ],
+
     tag: "Verified",
     tagColor: "oklch(0.71 0.09 130)",
     featured: true,
@@ -107,13 +96,7 @@ export const herbs: Herb[] = [
       "/thumbnails/med2_pasted_image__4_.jpg",
       "/thumbnails/med2_pasted_image__5_.jpg"
     ],
-    dziImages: [
-      "/deepzoom/med2_pasted_image.dzi",
-      "/deepzoom/med2_pasted_image__2_.dzi",
-      "/deepzoom/med2_pasted_image__3_.dzi",
-      "/deepzoom/med2_pasted_image__4_.dzi",
-      "/deepzoom/med2_pasted_image__5_.dzi"
-    ],
+
     tag: "not Verified",
     tagColor: "oklch(0.65 0.2 25)",
     featured: false,

@@ -12,14 +12,6 @@ import sectionForest from "@/assets/section-forest.jpg";
 if (typeof window !== "undefined") gsap.registerPlugin(ScrollTrigger);
 
 export const Route = createFileRoute("/herbs")({
-  head: () => ({
-    meta: [
-      { title: "The Botanical Compendium · Kaya Remedies" },
-      { name: "description", content: "Explore the full compendium of sacred herbs. Filter by tradition, search by use, study each plant in depth — all freely shared." },
-      { property: "og:title", content: "The Botanical Compendium · Kaya Remedies" },
-      { property: "og:description", content: "A living, free archive of botanical wisdom. Sacred remedies, traditional and modern use." },
-    ],
-  }),
   validateSearch: (s: Record<string, unknown>) => ({
     cat: (s.cat as string) ?? undefined,
     search: (s.search as string) ?? undefined,

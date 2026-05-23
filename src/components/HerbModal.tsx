@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import type { Herb } from "@/data/herbs";
-import { DeepZoomViewer } from "@/components/DeepZoomViewer";
 
 interface Props {
   herb: Herb | null;
@@ -60,11 +59,7 @@ export function HerbModal({ herb, onClose }: Props) {
           {/* Image gallery */}
           <div className="bg-black/60 p-6 flex flex-col items-center justify-center border-b md:border-b-0 md:border-r border-sage/15">
             <div className="w-full aspect-square md:aspect-auto md:h-[65%] min-h-[300px] md:min-h-[380px] relative rounded-2xl overflow-hidden bg-black/40 border border-sage/10">
-              {herb.dziImages && herb.dziImages[activeImg] ? (
-                <DeepZoomViewer dziUrl={herb.dziImages[activeImg]} className="w-full h-full absolute inset-0 z-0" />
-              ) : (
-                <img src={herb.images[activeImg]} alt={herb.name} className="w-full h-full object-cover" />
-              )}
+              <img src={herb.images[activeImg]} alt={herb.name} className="w-full h-full object-cover" />
             </div>
             {herb.images.length > 1 && (
               <div className="flex gap-3 mt-5 overflow-x-auto max-w-full pb-2 scrollbar-thin">

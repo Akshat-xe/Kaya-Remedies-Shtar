@@ -16,15 +16,6 @@ if (typeof window !== "undefined") {
 }
 
 export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Kaya Remedies · A Modern Botanical Library" },
-      { name: "description", content: "A free, modern Charaka Samhita. Explore over a dozen sacred herbs and their traditional, science-backed wisdom — beautifully presented." },
-      { property: "og:title", content: "Kaya Remedies · Botanical Wisdom, Freely Shared" },
-      { property: "og:description", content: "Ancient botanical knowledge refined for the modern world. A living, freely shared library of herbs." },
-      { property: "og:type", content: "website" },
-    ],
-  }),
   component: Landing,
 });
 
