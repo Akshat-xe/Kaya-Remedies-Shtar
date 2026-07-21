@@ -33,3 +33,5 @@ dist-ssr
 Herbs_list/
 img/
 src/raw-images/
+__pycache__/
+*.pyc
